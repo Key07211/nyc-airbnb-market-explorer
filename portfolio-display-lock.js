@@ -14,14 +14,19 @@
   style.textContent = `
     .dashboard-ask-button,
     .topbar-mode-switcher,
-    .dashboard-publish-button {
+    .dashboard-publish-button,
+    .theme-drawer {
       display: none !important;
     }
   `;
   document.head.appendChild(style);
 
   function removeEditingControls(root) {
-    root.querySelectorAll("button, a, [role='menuitem']").forEach((element) => {
+    const candidates = [
+      ...(root.matches?.("button, a, [role='menuitem']") ? [root] : []),
+      ...root.querySelectorAll("button, a, [role='menuitem']"),
+    ];
+    candidates.forEach((element) => {
       const label = (element.getAttribute("aria-label") || element.textContent || "").trim();
       if (blockedLabels.has(label)) element.remove();
     });
