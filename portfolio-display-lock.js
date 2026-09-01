@@ -22,6 +22,12 @@
   document.head.appendChild(style);
 
   function removeEditingControls(root) {
+    if (root.matches?.(".theme-drawer")) {
+      root.remove();
+      return;
+    }
+    root.querySelectorAll(".theme-drawer").forEach((element) => element.remove());
+
     const candidates = [
       ...(root.matches?.("button, a, [role='menuitem']") ? [root] : []),
       ...root.querySelectorAll("button, a, [role='menuitem']"),
