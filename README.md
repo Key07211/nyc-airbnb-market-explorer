@@ -125,7 +125,7 @@ Neighbourhoods combining above-median price and above-median review activity inc
 |---|---|
 | [`airbnb_analysis.ipynb`](./airbnb_analysis.ipynb) | Data cleaning, exploratory analysis, visualizations, and conclusions |
 | [`AB_NYC_2019.csv`](./AB_NYC_2019.csv) | Source dataset |
-| [(https://key07211.github.io/nyc-airbnb-market-explorer/) | Published interactive dashboard |
+| [`Interactive Dashboard`](./https://key07211.github.io/nyc-airbnb-market-explorer/) | Published interactive dashboard |
 | [`A1violinplot.png`](./A1violinplot.png) | Borough price-distribution visualization |
 | [`New_York_City_.png`](./New_York_City_.png) | NYC map asset used by the notebook |
 
